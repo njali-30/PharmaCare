@@ -1,0 +1,355 @@
+/* Container: Left + Right */
+.home-container {
+    display: flex;
+    width: 95%;
+    max-width: 1400px;
+    gap: 30px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Left Side (70%) */
+.home-left {
+    flex: 7;  /* 70% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 60px; /* uniform padding */
+}
+
+/* Headings & Text */
+.home-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #1f3c88;
+    margin: 0;
+}
+
+.home-left h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+.home-left p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin: 0;
+    color: #444;
+    max-width: 85%;
+}
+
+/* Latest Edition Button */
+.latest-edition-btn {
+    background: linear-gradient(90deg, #1f3c88, #3c6ad8);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 12px;
+    font-size: 1.07rem;
+    font-weight: 600;
+    margin-top: 15px;
+    width: fit-content;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.latest-edition-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(31, 60, 136, 0.4);
+}
+
+/* Counts Section */
+.counts {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.count-item h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #1f3c88;
+}
+
+.count-item span {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Right Side (30%) - Popular Articles */
+.home-right {
+    flex: 3;  /* 30% */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 14px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.12);
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Popular Articles Header */
+.home-right h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #1f3c88;
+    text-align: center;
+    border-bottom: 2px solid #1f3c88;
+    padding-bottom: 8px;
+}
+
+/* Article Cards - increased size & padding */
+.home-right .article-card {
+    background: linear-gradient(90deg, #edf3ff, #ffffff);
+    padding: 20px 22px;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: 0.3s;
+    box-shadow: 0px 3px 8px rgba(31,60,136,0.15);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100px; /* taller for easier click */
+}
+
+.home-right .article-card:last-child {
+    margin-bottom: 0;
+}
+
+.home-right .article-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    color: #1f3c88;
+}
+
+.home-right .article-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.home-right .article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(31, 60, 136, 0.25);
+}
+
+/* Scrollbar */
+.home-right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.home-right::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .home-container {
+        flex-direction: column-reverse;
+    }
+
+    .home-left, .home-right {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .home-right {
+        max-height: 300px;
+    }
+}
+
+/* ------------------- SPECIAL EDITIONS ------------------- */
+.special-page {
+    width: 95%;
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.special-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f3c88;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.year-selector-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.year-selector {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.tabs-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-btn {
+    background-color: #1f3c88;
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #3c6ad8;
+}
+
+.tabs-container {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 10px 0;
+    flex: 1;
+}
+
+/* Special Edition Cards */
+.tab-card {
+    min-width: 200px;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #edf3ff, #ffffff);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 3px 8px rgba(31,60,136,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px; /* taller preview */
+}
+
+.tab-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 14px rgba(31,60,136,0.25);
+}
+
+.tab-preview {
+    height: 250px;
+    background-color: #cce0ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tab-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f3c88;
+}
+
+.no-editions {
+    font-size: 1rem;
+    color: #666;
+    margin: auto;
+}
+
+/* Scrollbar for tabs */
+.tabs-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tabs-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+/* ------------------- Footer ------------------- */
+.home-footer {
+    width: 100%;
+    background-color: #1f3c88;
+    color: #fff;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.footer-section ul li button:hover {
+    text-decoration: underline;
+}
+
+.footer-section p, .footer-section span {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}

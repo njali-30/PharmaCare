@@ -1,0 +1,151 @@
+.editions-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f9fafb;
+    padding: 20px;
+}
+
+/* Top info bar */
+.editions-top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.paper-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.paper-title {
+    font-size: 28px;
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+.publication-date {
+    font-size: 16px;
+    color: #374151;
+}
+
+/* Controls */
+.editions-controls button {
+    margin-left: 12px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: white;
+    transition: all 0.3s ease;
+}
+.editions-controls button:hover {
+    background: linear-gradient(90deg, #1e3a8a, #1d4ed8);
+    transform: translateY(-2px);
+}
+
+/* Page Viewer */
+.page-viewer {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.page-container {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.page-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30,58,138,0.8);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.page-btn:hover {
+    background: rgba(30,58,138,1);
+    transform: translateY(-50%) scale(1.05);
+}
+/* Date Picker Container */
+.date-picker-container {
+    display: flex;
+    align-items: center;
+    margin: 0 20px; /* space between paper details and controls */
+}
+
+.date-picker-container label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+    color: #1e3a8a;
+}
+
+/* Date Input Styling */
+.date-picker-container input[type="date"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.date-picker-container input[type="date"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .editions-top-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date-picker-container {
+        margin: 10px 0;
+    }
+
+    .editions-controls {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

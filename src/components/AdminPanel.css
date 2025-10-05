@@ -1,0 +1,218 @@
+/* Root container */
+.admin-root {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 220px;
+    background-color: #1f3c88; /* PharmaCare blue */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-radius: 0 15px 15px 0;
+}
+
+.admin-brand h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Sidebar buttons */
+.nav-item {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+}
+
+/* Logout button */
+.btn-logout {
+    margin-top: auto;
+    padding: 12px 15px;
+    border: none;
+    background-color: #ff4d4f;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #d9363e;
+}
+
+/* Main content */
+.admin-main {
+    flex: 1;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.admin-main header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.admin-main header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f3c88;
+}
+
+.admin-main header div {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form cards */
+.form-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.form-card input[type="text"],
+.form-card input[type="date"],
+.form-card input[type="file"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-card input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Checkbox */
+.form-card input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1f3c88;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Danger buttons (remove/delete) */
+.btn.danger {
+    background-color: #ff4d4f;
+}
+
+.btn.danger:hover {
+    background-color: #d9363e;
+}
+
+.btn.small {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+/* Table/View section for delete tab */
+.view-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edition-card {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Page preview images */
+.form-card img {
+    border-radius: 8px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .admin-root {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    .nav-item {
+        margin: 0 8px;
+        white-space: nowrap;
+    }
+
+    .btn-logout {
+        margin-left: auto;
+    }
+
+    .admin-main {
+        padding: 20px 15px;
+    }
+}
